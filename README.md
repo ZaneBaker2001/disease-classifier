@@ -206,6 +206,13 @@ The serving config stores:
 - Calibration improved **ECE** from **0.0775** to **0.0540**, meaning confidence estimates became better aligned with observed correctness without changing classification decisions.
 - The learned temperature was **0.5890**, which sharpens the logits because the model divides logits by the temperature during inference.
 
+## Confusion Matrix 
+
+!(./sample_confusion_matrix.png)
+This confusion matrix reveals that: 
+- The model is strongest on healthy and bean_rust: it correctly classifies 42/42 healthy (100%) and 42/43 bean_rust (97.7%) samples, with almost no confusion between those classes.
+- The main weakness is angular_leaf_spot, where 34/43 (79.1%) are correct and most errors are predicted as bean_rust (8 cases), making that the key confusion to focus on improving.
+
 ## MLflow outputs
 
 During training, the pipeline logs:
