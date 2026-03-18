@@ -172,6 +172,20 @@ The serving config stores:
 | 5 | 0.2128 | 0.9410 | 0.9410 | 0.1635 | 0.9474 | 0.9466 |
 | 6 | 0.1534 | 0.9536 | 0.9536 | 0.1498 | 0.9398 | 0.9389 |
 
+## Reliability 
+This graph visualizes behavior under uncalibrated reliability: 
+
+![Uncalibrated Reliability](./reliability_uncalibrated_sample.png)
+
+This graph visualizes behavior under calibrated reliability: 
+
+![Calibrated Reliability](./reliability_calibrated_sample.png)
+
+These graphs reveal that:
+
+- The calibrated model’s confidence scores align more closely with observed accuracy.
+- Calibration improved confidence reliability without affecting classification quality. 
+
 ## Confusion Matrix 
 
 ![Confusion Matrix](./sample_confusion_matrix.png)
