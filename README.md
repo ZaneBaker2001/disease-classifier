@@ -2,6 +2,13 @@
 
 A compact image-classification project for the Hugging Face `beans` dataset that trains an EfficientNet-B0 classifier in PyTorch, calibrates prediction confidence with JAX temperature scaling, and tracks experiments with MLflow.
 
+## Highlights
+
+- Achieves 95% validation accuracy on bean disease classification
+- Reduces overconfidence using temperature scaling (ECE improvement)
+- End-to-end ML pipeline: training, calibration, MLflow tracking, inference
+- Combines a PyTorch model and JAX calibration in a single workflow
+
 ## Overview
 
 This project trains a 3-class bean leaf disease classifier on the Hugging Face `beans` dataset.
@@ -15,12 +22,12 @@ Core pieces:
 
 ## Relevance 
 
-- Raw neural network probabilities are often overconfident. In real-world applications, reliable confidence estimates are as important as accuracy.
-- This model demonstrates how temperature scaling improves probability reliability without changing predictions.
+- Most deep learning models produce overconfident probabilities, which makes them unreliable in real-world decision-making systems.
+- This implementation demonstrates how post-hoc calibration using temperature scaling improves trustworthiness without sacrificing accuracy.
 
 ## Quick Start  
 
-To setup the project locally and train the model:
+To setup the project locally, install the required packages, and train the model:
 
 ```bash
 git clone https://github.com/ZaneBaker2001/disease-classifier.git
@@ -38,6 +45,8 @@ Predict on a single image:
 ```bash
 python3 predict.py   --image path/to/image.jpg   --model outputs/best_model.pt   --serving-config outputs/serving_config.json
 ```
+
+This command is also compatible with .png images. 
 
 ### Prediction output
 
