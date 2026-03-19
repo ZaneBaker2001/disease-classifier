@@ -20,7 +20,7 @@ The dataset classes come from the Hugging Face `beans` dataset and are loaded di
 ## Repository structure
 
 ```text
-beans-disease-ml/
+disease-classifier/
 ├── configs/
 │   └── config.yaml            # Training configuration
 ├── outputs/                   # Local outputs written by training
