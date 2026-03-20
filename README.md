@@ -173,11 +173,11 @@ A sample training run produced the following results:
 ## Reliability 
 This graph visualizes behavior under uncalibrated reliability: 
 
-![Uncalibrated Reliability](./reliability_uncalibrated_sample.png)
+![Uncalibrated Reliability](./sample_plots/reliability_uncalibrated_sample.png)
 
 This graph visualizes behavior under calibrated reliability: 
 
-![Calibrated Reliability](./reliability_calibrated_sample.png)
+![Calibrated Reliability](./sample_plots/reliability_calibrated_sample.png)
 
 These graphs reveal that:
 
@@ -186,7 +186,7 @@ These graphs reveal that:
 
 ## Confusion Matrix 
 
-![Confusion Matrix](./sample_confusion_matrix.png)
+![Confusion Matrix](./sample_plots/sample_confusion_matrix.png)
 
 This confusion matrix reveals that: 
 - The model is strongest on healthy and bean_rust: it correctly classifies 42/42 healthy (100%) and 42/43 bean_rust (97.7%) samples, with almost no confusion between those classes.
